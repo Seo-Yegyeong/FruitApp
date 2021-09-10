@@ -3,19 +3,19 @@ package exercise.lab1_2;
 import java.util.Comparator;
 
 public class Fruit implements Comparator<Fruit> {
+	private int number;
 	private String name;
 	private int price;
-	private int stock_num;
 	
 	
 	public Fruit() {
 	}
 
-	public Fruit(String name, int price, int stock_num) {
+	public Fruit(int number, String name, int price) {
 		super();
+		this.number = number;
 		this.name = name;
 		this.price = price;
-		this.stock_num = stock_num;
 	}
 	
 	public String getName() {
@@ -30,16 +30,16 @@ public class Fruit implements Comparator<Fruit> {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public int getStock_num() {
-		return stock_num;
+	public int getNumber() {
+		return number;
 	}
-	public void setStock_num(int stock_num) {
-		this.stock_num = stock_num;
+	public void setStock_num(int number) {
+		this.number = number;
 	}
 
 	@Override
 	public String toString() {
-		return "Fruit [name=" + name + ", price=" + price + ", stock_num=" + stock_num + "]";
+		return "Fruit [number=" + number + ", name=" + name + ", price=" + price + "]";
 	}
 
 	public int compare(Fruit o1, Fruit o2) {
